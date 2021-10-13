@@ -40,8 +40,19 @@ trimPropertiesMutation({ name: '  jane  ' })
  * findLargestInteger([{ integer: 1 }, { integer: 3 }, { integer: 2 }]) // returns 3
  */
 function findLargestInteger(integers) {
-  // ✨ implement
+  let result = integers[0].integer
+  integers.forEach((item) => {
+
+    if (item.integer > result) {
+      result = item.integer
+    }
+
+  })
+  return result
+
 }
+
+findLargestInteger([{ integer: 1 }, { integer: 3 }, { integer: 2 }])
 
 class Counter {
   /**
